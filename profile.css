@@ -60,18 +60,22 @@ html{
 }
 ::-webkit-input-placeholder {
    text-align: center;
+   color:#000;
 }
 
 :-moz-placeholder { /* Firefox 18- */
    text-align: center;  
+   color:#000;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    text-align: center;  
+   color:#000;
 }
 
 :-ms-input-placeholder {  
    text-align: center; 
+   color:#000;
 }
 textarea{
 	resize:none;
@@ -138,6 +142,7 @@ ul.menu-nav li .search{
     border-radius: 25px;
 	text-align:center;
 	padding:0 1rem;
+	outline: none;
 }
 .profilePic{
 	margin: 2% 2% 5% 16%;
@@ -173,40 +178,48 @@ ul.menu-nav li .search{
     left: -9999px;
   }
 .tabs li{
-    width:33%;
     float: left;
 }
-.tabs label{
+.tabs li:first-child{
+	margin-left: 27%;
+}
+.tabs label.tabsLabel{
 	cursor: pointer;
   	display: block;
-  	padding: 15px 20px;
-  	font-weight: bold;
-  	text-transform: uppercase;
-    background: -webkit-linear-gradient(203deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
-    background: -o-linear-gradient(203deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
-    background: linear-gradient(293deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
-  	position: relative;
-  	top: -10px;
-	-webkit-transition: all 200ms ease-in-out;
+  	padding: 15px 45px;
+  	background: -webkit-linear-gradient(23deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+    background: -o-linear-gradient(23deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+    background: linear-gradient(113deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+    position: relative;
+    top: -10px;
+    -webkit-transition: all 200ms ease-in-out;
     -moz-transition: all 200ms ease-in-out;
     -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
+    text-align: center;
+    width:200px;
 }
-.tabs label:hover{
-	background: #666;
+.tabs label.tabsLabel:hover{
+	background: #b2b2b2;
 }
 .tabs .tabContent{
 	z-index: 2;
     display: none; 
     overflow: hidden;
     width: 99%;
-    /*font-size: 17px;
-    line-height: 25px;
-    padding: 25px;  
-    */position: absolute;
+    position: absolute;
     top: 50px;
     left: 0; 
-    background: #666;
+    background: -webkit-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+    background: -o-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+    background: -ms-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+    background: -moz-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+    background: linear-gradient(113deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+    margin: 0rem 0rem;
+    padding: 3rem 0rem;
+    opacity: 0.8;
+    border: 3px solid #000;
+  	border-radius: 25px;
 }
 /*.tabs input[type="radio"]:checked + label{
 	top:0;
@@ -215,61 +228,93 @@ ul.menu-nav li .search{
 .tabs [id^="tab"]:checked + label { 
     /*top: 0;*/
     /*padding-top: 7px; */
-    background: #666; 
+    background: #b2b2b2; 
   }
 .tabs [id^="tab"]:checked ~ [id^="tabContent"] {
     display: block;
 }
-form.profileForm label.aboutMe{
+form.profileForm{
+	width:60%;
+	margin:0 auto;
+}
+form.profileForm label{
 	display: inline-block;
-	width:40% !important;
+	width:25%;
+	color: #666;
+    font-size: 1.5rem;
 }
 form.profileForm input{
 	margin-left: 0rem;
 }
-form.profileForm textarea{
-	margin-top:-2rem;
-	margin-left:15.8rem;
+
+.profileForm input[type="text"]{
+		height: 2rem;
+		border-radius: 10px;
+		border: 2px solid #4c4c4c;
+		background: transparent;
+		font-size:2rem;
+		overflow:hidden;
+}
+.profileForm textarea{
+	border-radius: 10px;
+    border: 2px solid #666;
+    background: transparent;
+    font-size: 2rem;
+    overflow: hidden;
+	margin-top: -2rem;
+	margin-left:11rem;
+}
+.profileForm input[type="date"]{
+	border-radius: 10px;
+    border: 2px solid #666;
+    background: transparent;
+    font-size: 2rem;
+}
+.profileForm p{
+	width:60%;
+	margin:0 auto;
+	margin-bottom:2rem;
 }
 
 /* css for stats content */
 .stats {
-      position: relative;   
-      min-height: 200px; /* This part sucks */
-      clear: both;
-      margin: 25px 0;      
-    }
-    .stat {   
-       height: 41px; 
-    }
-    .stat label {
-      background: #eee; 
-      padding: 10px; 
-      border: 1px solid #ccc; 
-      margin-left: -1px; 
-      position: relative;
-      left: 1px;        
-      width: 70px;
-      display: block;
-    }
-    .stat [type=radio] {
-      display: none;   
-    }
-    .content {
-      position: absolute;
-      top: 0px;
-      left: 92px;
-      background: white;
-      right: 0;
-      bottom: 0;
-      padding: 20px;
-      border: 1px solid #ccc;       
-    }
-    [type=radio]:checked ~ label {
-      background: white;
-      border-bottom: 1px solid white;
-      z-index: 2;
-    }
-    [type=radio]:checked ~ label ~ .content {
-      z-index: 1;
-    }
+    position: relative;   
+    min-height: 200px; /* This part sucks */
+    clear: both;
+    margin: 25px 0;      
+}
+.stat {   
+    height: 41px; 
+}
+.stat label {
+	background: #eee; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    margin-left: -1px; 
+    position: relative;
+    left: 1px;        
+    width: 70px;
+    display: block;
+}
+
+.stat [type=radio] {
+	display: none;   
+}
+.content {
+    position: absolute;
+    top: 0px;
+    left: 92px;
+    background: white;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    border: 1px solid #ccc;       
+}
+.stats [type=radio]:checked ~ label {
+    background: white;
+    border-bottom: 1px solid white;
+    z-index: 2;
+}
+.stats [type=radio]:checked ~ label ~ .content {
+    z-index: 1;
+}
