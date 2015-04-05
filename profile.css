@@ -145,34 +145,84 @@ ul.menu-nav li .search{
 	margin:0 auto;
 }
 .profilePic img{
-	width:225px;
-	height:225px;
+	width:140px;
+	height:140px;
 	border-radius:50%;
 	display:block;
 	margin:auto;
 }
 .profileContent{
-	float:left;
 	font-size:2rem;
-	width: 49%;
 }
 .profileContent p{
 	margin-bottom:2rem;
 }
-.aboutMe{
-	margin:3rem 0rem;
-	border: 3px solid #000;
-  	border-radius: 25px;
-  	background: linear-gradient(113deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
-  	opacity: 0.8;
-  	padding: 2rem 3rem;
+.tabs{
+	/*width: 100%;  */
+	top:10px;
+	float: none;
+	list-style: none;
+	position: relative;
+	margin: 20px 5px 5px 10px;
+	text-align: left;
+	box-sizing:border-box;
 }
-form.profileForm{
-	/*display:none;*/
+.tabs input[type="radio"] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+.tabs li{
+    width:33%;
+    float: left;
 }
-form.profileForm label{
+.tabs label{
+	cursor: pointer;
+  	display: block;
+  	padding: 15px 20px;
+  	font-weight: bold;
+  	text-transform: uppercase;
+    background: -webkit-linear-gradient(203deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+    background: -o-linear-gradient(203deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+    background: linear-gradient(293deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+  	position: relative;
+  	top: -10px;
+	-webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+.tabs label:hover{
+	background: #666;
+}
+.tabs .tabContent{
+	z-index: 2;
+    display: none; 
+    overflow: hidden;
+    width: 99%;
+    /*font-size: 17px;
+    line-height: 25px;
+    padding: 25px;  
+    */position: absolute;
+    top: 50px;
+    left: 0; 
+    background: #666;
+}
+/*.tabs input[type="radio"]:checked + label{
+	top:0;
+	padding-bottom:20px;
+}*/
+.tabs [id^="tab"]:checked + label { 
+    /*top: 0;*/
+    /*padding-top: 7px; */
+    background: #666; 
+  }
+.tabs [id^="tab"]:checked ~ [id^="tabContent"] {
+    display: block;
+}
+form.profileForm label.aboutMe{
 	display: inline-block;
-	width:40%;
+	width:40% !important;
 }
 form.profileForm input{
 	margin-left: 0rem;
@@ -180,9 +230,4 @@ form.profileForm input{
 form.profileForm textarea{
 	margin-top:-2rem;
 	margin-left:15.8rem;
-}
-.heading{
-	/*border-bottom: 2px solid #000;
-	padding-bottom:1rem;
-	margin-bottom:2rem;*/
 }
