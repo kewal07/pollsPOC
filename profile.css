@@ -283,7 +283,7 @@ form.profileForm input{
     margin: 25px 0;      
 }
 .stat {   
-    height: 41px; 
+    height: 1%; 
 }
 .stat label {
 	background: #eee; 
@@ -292,22 +292,21 @@ form.profileForm input{
     margin-left: -1px; 
     position: relative;
     left: 1px;        
-    width: 70px;
     display: block;
+	width: 20%;
 }
 
 .stat [type=radio] {
 	display: none;   
 }
 .content {
+	left: 22%;
     position: absolute;
     top: 0px;
-    left: 92px;
     background: white;
     right: 0;
     bottom: 0;
-    padding: 20px;
-    border: 1px solid #ccc;       
+    padding: 20px;    
 }
 .stats [type=radio]:checked ~ label {
     background: white;
@@ -316,4 +315,80 @@ form.profileForm input{
 }
 .stats [type=radio]:checked ~ label ~ .content {
     z-index: 1;
+}
+
+.graphContainer{
+ width:300px;
+ font-family: Arial;
+ }
+
+.record{
+ float: left;
+ width: 100%;
+ border: 1px solid #ccc;
+ background-color: #f0f0f0;
+ margin-bottom: 2px;
+ -moz-border-radius: 0px 10px 10px 0px;
+ -moz-border-radius: 0px 10px 10px 0px;
+ 
+ }
+
+.bar {
+ /* background:linear-gradient(to right, red 50%, blue 50%); */
+ background: transparent url(gradient.png) repeat-x top left; 
+ float: left;
+ clear: left;
+ height: 30px;
+ animation: progress 2s 1 forwards;
+ }
+
+.bar span{
+ font-size: 12px;
+ font-weight: bold;
+ color: #fff;
+ float: left;
+ margin-left: 5px;
+ margin-top: 7px;
+ }
+
+.p{
+ padding-top: 3px;
+ float: right;
+ color: #6D8591;
+ clear: right;
+ font-size: 12px;
+ font-weight: bold;
+ height: 25px;
+ }
+
+.p span{
+ font-size: 12px;
+ font-weight: bold;
+ float: left;
+ margin-right: 5px;
+ margin-top: 5px;
+ }
+ 
+ @-webkit-keyframes progress { 
+    from { }
+
+    to { width: 36% }
+}
+
+@-moz-keyframes progress { 
+    from { }
+
+    to { width: 36% }
+}
+
+@-ms-keyframes progress { 
+    from { }
+
+    to { width: 36% }
+}
+
+@keyframes progress { 
+    from { }
+
+    to { width: 36% }
 }
