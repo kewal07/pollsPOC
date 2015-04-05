@@ -1,0 +1,188 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*{
+	padding:0;
+	margin:0;
+}
+html, body, div, span, applet, object, iframe,
+h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@font-face{
+	font-family:"droid";
+	src:url("\\fonts\\web_fonts\\droidsans_regular_macroman\\DroidSans-webfont.ttf");
+}
+html{
+	background:url('profile-f.jpg') no-repeat center center fixed;
+	background-size:cover;
+	font-family: 'droid',sans-serif;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+textarea{
+	resize:none;
+}
+#header{
+	background: -webkit-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+	background: -o-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+	background: -ms-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+	background: -moz-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+	background: linear-gradient(113deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+	width:100%;
+	margin:2rem 0rem;
+	padding:3rem 0rem;
+	opacity:0.8;
+}
+.logo,.menu,.search{
+	float:left;
+}
+.logo{
+	width:25rem;
+	margin-top:-2rem;
+	margin-right:8rem;
+	margin-left:5rem;
+}
+.logo img{
+	width:100%;
+}
+.menu{
+	font-size: 2rem;
+  	margin-top:-1.25rem;
+  	width:80rem;
+  	float:left;
+}
+ul.menu-nav li{
+	list-style-type: none;
+	float:left;
+	padding-left:2rem;
+}
+ul.menu-nav li.userInNav{
+	margin-left: 10rem;
+  	margin-top: -1.2rem;
+}
+ul.menu-nav li.userInNav img{
+	width: 30%;
+  	border-radius: 50%;
+}
+ul.menu-nav li a{
+	color:black;
+  	text-decoration:none;
+}
+ul.menu-nav li a:hover{
+	color:red;
+}
+ul.menu-nav li .search{
+	margin-top:-0.65rem;
+	/*margin-left:1rem;*/
+}
+.searchBox{
+	width:150%;
+	height:3rem;
+	color:#000;
+	font-size:1rem;
+	border: 3px solid #000;
+    border-radius: 25px;
+	text-align:center;
+	padding:0 1rem;
+}
+.profilePic{
+	margin: 2% 2% 5% 16%;
+	width: 50%;
+	margin:0 auto;
+}
+.profilePic img{
+	width:225px;
+	height:225px;
+	border-radius:50%;
+	display:block;
+	margin:auto;
+}
+.profileContent{
+	float:left;
+	font-size:2rem;
+	width: 49%;
+}
+.profileContent p{
+	margin-bottom:2rem;
+}
+.aboutMe{
+	margin:3rem 0rem;
+	border: 3px solid #000;
+  	border-radius: 25px;
+  	background: linear-gradient(113deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+  	opacity: 0.8;
+  	padding: 2rem 3rem;
+}
+form.profileForm{
+	/*display:none;*/
+}
+form.profileForm label{
+	display: inline-block;
+	width:40%;
+}
+form.profileForm input{
+	margin-left: 0rem;
+}
+form.profileForm textarea{
+	margin-top:-2rem;
+	margin-left:15.8rem;
+}
+.heading{
+	/*border-bottom: 2px solid #000;
+	padding-bottom:1rem;
+	margin-bottom:2rem;*/
+}

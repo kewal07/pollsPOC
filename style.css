@@ -1,3 +1,51 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 @font-face{
 	font-family:"capture";
 	src:url('Capture_it.ttf');
@@ -6,11 +54,11 @@
 	margin:0;
 	padding:0;
 	outline:0;
-	font-family: 'capture',sans-serif;
+	
 }
 html{
 	background:url('bg2.jpg') no-repeat center center fixed;
-	background-size:cover;
+	background-size:cover;/*font-family: 'capture',sans-serif;*/
 }
 ::-webkit-input-placeholder {
    text-align: center;
@@ -35,29 +83,29 @@ html{
 	background: -moz-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
 	background: linear-gradient(113deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
 	width:100%;
-	margin:2em 0em;
-	padding:4em 0em;
+	margin:2rem 0rem;
+	padding:3rem 0rem;
 	opacity:0.8;
 }
 .logo,.menu,.search{
 	float:left;
 }
 .logo{
-	margin-top:-2em;
-	margin-right:8em;
-	margin-left:5em;
+	margin-top:-2rem;
+	margin-right:8rem;
+	margin-left:5rem;
 }
 .logo img{
 	width:100%;
 }
 .menu{
-	font-size: 2em;
-  	margin-top:-0.5em;
+	font-size: 2rem;
+  	margin-top:-0.5rem;
 }
 ul.menu-nav li{
 	list-style-type: none;
 	float:left;
-	padding-left:1em;
+	padding-left:1rem;
 }
 ul.menu-nav li a{
 	color:black;
@@ -67,29 +115,29 @@ ul.menu-nav li a:hover{
 	color:red;
 }
 .search{
-	margin-top:-1em;
-	margin-left:1em;
+	margin-top:-0.65rem;
+	/*margin-left:1rem;*/
 }
 .searchBox{
 	width:200%;
-	height:2em;
+	height:3rem;
 	color:#000;
-	font-size:1em;
+	font-size:1rem;
 	border: 3px solid #000;
     border-radius: 25px;
 	text-align:center;
-	padding:0 1em;
+	padding:0 1rem;
 }
 #content{
-	margin: 0 10em;
+	margin: 0 10rem;
 }
 .questions{
 	border: 3px solid #000;
   	border-radius: 25px;
   	background-color: white;
   	opacity: 0.8;
-  	padding: 3em 3em;
-  	margin-bottom:2em;
+  	padding: 3rem 3rem;
+  	margin-bottom:2rem;
   	display: -ms-flex; 
   	display: -webkit-flex; 
   	display: flex;
@@ -98,38 +146,38 @@ ul.menu-nav li a:hover{
 	flex:1;
 }
 .userInfo{
-	margin-right: 1em;
+	margin-right: 1rem;
 	flex:0.2 !important;
- 	padding-top: 1em;
+ 	padding-top: 1rem;
 }
 .userImage img{
 	border-radius:50%;
-	padding:0 2em;
-	width:10em;
+	padding:0 2rem;
+	width:10rem;
 }
 .userBrief p{
-	padding: 1em 2em;
-  	font-size: 1.5em;
+	padding: 1rem 2rem;
+  	font-size: 1.5rem;
 }
 .mainPoll{
-	padding:1em;
+	padding:1rem;
 }
 .mainPoll p{
-	font-size: 2em;
+	font-size: 2rem;
 }
 .mainPoll .optionsForm{
-	padding:2em 2em;
+	padding:2rem 2rem;
 }
 .optionsForm p {
-	padding-left:0.5em;
-	padding-bottom:0.5em;
-	font-size:1.25em;
+	padding-left:0.5rem;
+	padding-bottom:0.5rem;
+	font-size:1.25rem;
 }
 ul.pollInfoUl li {
 	list-style-type: none;
 	float:left;
-	margin-right:8em;
-	font-size:1.15em;
+	margin-right:8rem;
+	font-size:1.15rem;
 }
 .clearfix:after { 
    content: "."; 
@@ -140,14 +188,14 @@ ul.pollInfoUl li {
 }
 @media only screen and (max-width: 419px){
 	ul.pollInfoUl li{
-  		margin-left: 0em !important;
-		margin-right:1em !important;
-		font-size: 0.85em !important;
+  		margin-left: 0rem !important;
+		margin-right:1rem !important;
+		font-size: 0.85rem !important;
 	}
 }
 @media only screen and (max-width: 372px){
 	ul.pollInfoUl li{
-		font-size: 0.85em !important;
+		font-size: 0.85rem !important;
 		width: 100% !important;
   		margin: 0 auto!important;
 	}
@@ -162,13 +210,13 @@ ul.pollInfoUl li {
 	}
 	.logo{
 		width:100%;
-		margin-left: 1em;
+		margin-left: 1rem;
 	}
 	.logo img{
 		width:90%;
 	}
 	.menu{
-		margin-top:2em;
+		margin-top:2rem;
 		width:100%;
 	}
 	ul.menu-nav li{
@@ -178,7 +226,7 @@ ul.pollInfoUl li {
 		background: #fff;
 		border: 3px solid #000;
     	border-radius: 25px;
-    	margin-bottom:1em;
+    	margin-bottom:1rem;
 	}
 	.search{
 		margin:0;
@@ -187,19 +235,19 @@ ul.pollInfoUl li {
 	.searchBox{
 		width:100%;
 	    margin:0 auto;
-	    font-size:1em;
-	    height:2.7em;
+	    font-size:1rem;
+	    height:2.7rem;
 	}
 	#content{
-		margin: 2em 0.5em;
+		margin: 2rem 0.5rem;
 	}
 	.questions{
-		padding: 1em 0em;
-  		margin: 0em;
-  		margin-bottom:2em;
+		padding: 1rem 0rem;
+  		margin: 0rem;
+  		margin-bottom:2rem;
 	}
 	.userInfo{
-		margin:1em;
+		margin:1rem;
 		padding:0;
 	}
 	.userImage img{
@@ -207,32 +255,32 @@ ul.pollInfoUl li {
 		width:100%;
 	}
 	.userBrief p{
-		padding: 1em 0em;
-  		font-size: 1em;
+		padding: 1rem 0rem;
+  		font-size: 1rem;
 	}
 	.mainPoll{
-		padding:1em;
-		margin-bottom: -1em;
+		padding:1rem;
+		margin-bottom: -1rem;
 	}
 	.mainPoll p{
-		font-size: 1em;
+		font-size: 1rem;
 	}
 	.mainPoll .optionsForm{
-		padding:1em 1em;
-		font-size:1em;
+		padding:1rem 1rem;
+		font-size:1rem;
 	}
 	ul.pollInfoUl li{
 		 list-style-type: none;
 		 float: left;
-		 margin-left: 0em;
-		 margin-right:1em;
-		 font-size: 1em;
+		 margin-left: 0rem;
+		 margin-right:1rem;
+		 font-size: 1rem;
 	}
 }
 @media only screen and (max-width: 700px and min-width: 481px){
 	#header{
 		margin:0;
-		margin-bottom: 5em;
+		margin-bottom: 5rem;
 		padding:0;
 	}
 	.logo,.menu,.search{
@@ -248,7 +296,7 @@ ul.pollInfoUl li {
   		padding:0;
 	}
 	.search{
-		padding-bottom: 1em;
+		padding-bottom: 1rem;
 		margin-left:0;
 	}
 	.searchBox{
