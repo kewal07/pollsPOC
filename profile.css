@@ -142,7 +142,7 @@ ul.menu-nav li .search{
     border-radius: 25px;
 	text-align:center;
 	padding:0 1rem;
-	outline: none;
+	outline: none;	
 }
 .profilePic{
 	margin: 2% 2% 5% 16%;
@@ -246,7 +246,6 @@ form.profileForm label{
 form.profileForm input{
 	margin-left: 0rem;
 }
-
 .profileForm input[type="text"]{
 		height: 2rem;
 		border-radius: 10px;
