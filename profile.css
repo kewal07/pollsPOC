@@ -231,3 +231,45 @@ form.profileForm textarea{
 	margin-top:-2rem;
 	margin-left:15.8rem;
 }
+
+/* css for stats content */
+.stats {
+      position: relative;   
+      min-height: 200px; /* This part sucks */
+      clear: both;
+      margin: 25px 0;      
+    }
+    .stat {   
+       height: 41px; 
+    }
+    .stat label {
+      background: #eee; 
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      margin-left: -1px; 
+      position: relative;
+      left: 1px;        
+      width: 70px;
+      display: block;
+    }
+    .stat [type=radio] {
+      display: none;   
+    }
+    .content {
+      position: absolute;
+      top: 0px;
+      left: 92px;
+      background: white;
+      right: 0;
+      bottom: 0;
+      padding: 20px;
+      border: 1px solid #ccc;       
+    }
+    [type=radio]:checked ~ label {
+      background: white;
+      border-bottom: 1px solid white;
+      z-index: 2;
+    }
+    [type=radio]:checked ~ label ~ .content {
+      z-index: 1;
+    }
