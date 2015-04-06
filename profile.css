@@ -318,28 +318,37 @@ form.profileForm input{
 }
 
 .graphContainer{
- width:300px;
  font-family: Arial;
  }
 
 .record{
  float: left;
- width: 100%;
+ width: 60%;
  border: 1px solid #ccc;
  background-color: #f0f0f0;
- margin-bottom: 2px;
+ margin-bottom: 5px;
  -moz-border-radius: 0px 10px 10px 0px;
  -moz-border-radius: 0px 10px 10px 0px;
  
  }
 
 .bar {
- /* background:linear-gradient(to right, red 50%, blue 50%); */
- background: transparent url(gradient.png) repeat-x top left; 
  float: left;
  clear: left;
  height: 30px;
- animation: progress 2s 1 forwards;
+ }
+
+ .bar .barColor{
+ height:100%;
+ animation-name: resize;
+ animation-duration: 3s;
+ animation-timing-function: moz-linear-gradient;
+ animation-fill-mode: forwards;
+
+ -webkit-animation-name: resize;
+ -webkit-animation-duration: 3s;
+ -webkit-animation-timing-function: step-starts;
+ -webkit-animation-fill-mode: forwards;
  }
 
 .bar span{
@@ -348,7 +357,7 @@ form.profileForm input{
  color: #fff;
  float: left;
  margin-left: 5px;
- margin-top: 7px;
+ margin-top: -20px;
  }
 
 .p{
@@ -358,7 +367,6 @@ form.profileForm input{
  clear: right;
  font-size: 12px;
  font-weight: bold;
- height: 25px;
  }
 
 .p span{
@@ -368,27 +376,34 @@ form.profileForm input{
  margin-right: 5px;
  margin-top: 5px;
  }
- 
- @-webkit-keyframes progress { 
-    from { }
 
-    to { width: 36% }
+ @keyframes resize {
+  0% {
+    padding: 0;
+  }
+  50% {
+    padding: 0 0;
+    background-color:rgba(255,0,0,0.2);
+  }
+  100% {
+    padding: 0 0;
+    background-color:rgba(255,0,0,0.9);
+  }
 }
 
-@-moz-keyframes progress { 
-    from { }
-
-    to { width: 36% }
-}
-
-@-ms-keyframes progress { 
-    from { }
-
-    to { width: 36% }
-}
-
-@keyframes progress { 
-    from { }
-
-    to { width: 36% }
+@-webkit-keyframes resize {
+  0% {
+  	width:10%;
+    padding: 0;
+  }
+  50% {
+  	width:20%;
+    padding: 0 0;
+    background-color:rgba(255,0,0,0.2);
+  }
+  100% {
+  	width:100%;
+    padding: 0 0;
+    background-color:rgba(255,0,0,0.9);
+  }
 }
