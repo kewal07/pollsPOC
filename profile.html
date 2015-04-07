@@ -104,9 +104,34 @@
 						<input type="radio" name="tabs" id="tab3" unchecked />
 						<label class="tabsLabel" for="tab3">Settings</label>
 						<div id="tabContent3" class="tabContent">
-							<p>
-								Change Password
-							</p>
+							<ul>
+								<li>
+									<div id="changePassword">
+										<p>Change Password</p>
+										<form class="changePasswordForm">
+											<p>
+												<label for="oldP">Current Password</label>
+												<input id="oldP" type="password" name="oldP" placeholder="********">
+											</p>
+											<p>
+												<label for="newP">New Password</label>
+												<input id="newP" type="password" name="newP" placeholder="********">							
+											</p>
+											<p>
+												<label for="confirmNewP">Confirm Password</label>
+												<input id="confirmNewP" type="password" name="confirmNewP" placeholder="********">	
+											</p>	
+											<input type="submit" value="Set New Password">		
+										</form>
+									</div>
+								</li>
+								<li>
+									<div id="deleteAccount">
+										<p>Delete Account</p>
+										<input type="submit" value="Delete Account">
+									</div>
+								</li>
+							</ul>
 						</div>
 					</li>
 				</ul>

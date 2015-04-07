@@ -235,7 +235,8 @@ ul.menu-nav li .search{
 }
 form.profileForm{
 	width:60%;
-	margin:0 auto;
+	/*margin:0 auto;*/
+	margin-left:21rem;
 }
 form.profileForm label{
 	display: inline-block;
@@ -407,3 +408,46 @@ form.profileForm input{
     background-color:rgba(255,0,0,0.9);
   }
 }
+/*changePasswordForm css*/
+/*
+#changePassword{
+	width: 50%;
+    margin-left: 30rem;
+}
+.changePasswordForm{
+	margin-left: -14rem;
+}
+.changePasswordForm + p {
+	font-size: 2rem;
+}
+.changePasswordForm label{
+	display: inline-block;
+	width:25%;
+	color: #666;
+    font-size: 1.5rem;
+}
+.changePasswordForm input{
+	margin-left: 0rem;
+}
+.changePasswordForm input[type="text"]{
+		height: 2rem;
+		border-radius: 10px;
+		border: 2px solid #4c4c4c;
+		background: transparent;
+		font-size:2rem;
+		overflow:hidden;
+}
+.changePasswordForm input[type="submit"]{
+	margin-left:14rem;
+}
+.changePasswordForm p{
+	width:60%;
+	margin:0 auto;
+	margin-bottom:2rem;
+}
+#deleteAccount{
+	margin-left: -25rem;
+    border-left: 2px solid #666;
+    padding-left: 10rem;
+}
+*/
