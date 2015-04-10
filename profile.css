@@ -248,16 +248,16 @@ form.profileForm input{
 	margin-left: 0rem;
 }
 .profileForm input[type="text"]{
-		height: 2rem;
+		height: 3rem;
 		border-radius: 10px;
-		border: 2px solid #4c4c4c;
+		border: 1px solid #4c4c4c;
 		background: transparent;
 		font-size:2rem;
 		overflow:hidden;
 }
 .profileForm textarea{
 	border-radius: 10px;
-    border: 2px solid #666;
+    border: 1px solid #666;
     background: transparent;
     font-size: 2rem;
     overflow: hidden;
