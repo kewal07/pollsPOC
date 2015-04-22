@@ -93,7 +93,7 @@ body{
 	width:100%;
 	margin:2rem 0rem;
 	padding:3rem 0rem;
-	opacity:0.8;
+	opacity:0.93;
 }
 #headerContent{
 	width:80%;
@@ -151,7 +151,7 @@ ul.menu-nav li a:hover{
 	border: 3px solid #000;
   	border-radius: 25px;
   	background-color: white;
-  	opacity: 0.8;
+  	opacity: 0.93;
   	padding: 3rem 3rem;
   	margin-bottom:2rem;
   	display: -ms-flex; 
