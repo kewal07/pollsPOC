@@ -62,6 +62,9 @@ html{
 	/*max-width: 1200px;
   	margin: 0 auto;
   	position: relative; /* Fix for absolute positioning */*/
+  	max-width: 1800px;
+  	margin: 0 auto;
+  	position: relative;
 }
 ::-webkit-input-placeholder {
    text-align: center;
@@ -78,6 +81,9 @@ html{
 :-ms-input-placeholder {  
    text-align: center; 
 }
+body{
+  	margin: 0 auto;
+}
 #header{
 	background: -webkit-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
 	background: -o-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
@@ -92,17 +98,24 @@ html{
 #headerContent{
 	width:80%;
 	margin:0 auto;
+	display:flex;
 }
-.logo,.menu,.search{
+#headerContent>div{
+	flex:1;
+}
+/*.logo,.menu,.search{
 	float:left;
-}
+}*/
 .logo{
 	margin: -2rem 0;
   	width: 30%;
 }
+.logo img{
+	width:100%;
+}
 .menu{
 	font-size: 2rem;
-  	margin-top:-0.5rem;
+  	margin-top:-2rem;
   	float:right;
 }
 ul.menu-nav li{
@@ -132,7 +145,7 @@ ul.menu-nav li a:hover{
 	padding:0 1rem;
 }
 #content{
-	margin: 0 10rem;
+	margin: 0 5rem;
 }
 .questions{
 	border: 3px solid #000;
@@ -145,7 +158,15 @@ ul.menu-nav li a:hover{
   	display: -webkit-flex; 
   	display: flex;
 }
-.questions>div{
+/*.questions>div{
+	flex:1;
+}*/
+.questionContent{
+	width:90%;
+	margin:0 auto;
+	display:flex;
+}
+.questionContent>div{
 	flex:1;
 }
 .userInfo{
@@ -155,12 +176,15 @@ ul.menu-nav li a:hover{
 }
 .userImage img{
 	border-radius:50%;
-	padding:0 2rem;
-	width:10rem;
+	padding:0;
+	width:100%;
 }
 .userBrief p{
-	padding: 1rem 2rem;
+	padding: 1rem 0rem;
   	font-size: 1.5rem;
+  	text-align: center;
+  	overflow: hidden;
+  	width: 100%;
 }
 .mainPoll{
 	padding:1rem;
@@ -179,7 +203,7 @@ ul.menu-nav li a:hover{
 ul.pollInfoUl li {
 	list-style-type: none;
 	float:left;
-	margin-right:7rem;
+	margin-right:4%;
 	font-size:1.15rem;
 }
 .clearfix:after { 
@@ -201,7 +225,7 @@ ul.pollInfoUl li {
   		margin: 0 auto!important;
 	}
 }*/
-@media only screen and (min-width:481px) and (max-width: 800px){
+@media only screen and (min-width:481px) and (max-width: 960px){
 	#header{
 		 padding: 1rem 0rem 2rem 0rem;
   	     margin-bottom: 3rem;
@@ -259,7 +283,7 @@ ul.pollInfoUl li {
 		width:100%;
 	}
 	.userBrief p{
-		padding: 1rem 1rem 0rem 0rem;
+		padding: 1rem 0rem 0rem 0rem;
   		font-size: 1rem;
 	}
 	.mainPoll{
