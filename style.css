@@ -86,6 +86,7 @@ html{
 	margin:2rem 0rem;
 	padding:3rem 0rem;
 	opacity:0.8;
+	position:fixed;
 }
 .logo,.menu,.search{
 	float:left;
@@ -94,11 +95,9 @@ html{
 	margin-top:-2rem;
 	margin-right:8rem;
 	margin-left:5rem;
-	width:37%;
 }
 .logo img{
-	/*width:100;*/
-	width:403px;height:69px;
+	width:100%;
 }
 .menu{
 	font-size: 2rem;
@@ -121,7 +120,7 @@ ul.menu-nav li a:hover{
 	/*margin-left:1rem;*/
 }
 .searchBox{
-	width:150%;
+	/*width:200%;*/
 	height:3rem;
 	color:#000;
 	font-size:1rem;
@@ -178,7 +177,7 @@ ul.menu-nav li a:hover{
 ul.pollInfoUl li {
 	list-style-type: none;
 	float:left;
-	margin-right:8rem;
+	margin-right:7rem;
 	font-size:1.15rem;
 }
 .clearfix:after { 
@@ -188,80 +187,9 @@ ul.pollInfoUl li {
    height: 0; 
    clear: both;
 }
-@media only screen and (max-width: 700px){
-	#header{
-		margin:0;
-		margin-bottom: 5rem;
-		padding: 1rem 0;
-	}
-	.logo,.menu,.search{
-		float:none;
-	}
-	.logo{
-		width: 60%;
-  		margin: 0 auto;
-	}
-	.logo img{
-		width: 100%;
-  		margin: 0 auto;
-	}
-	.menu{
-		width: 100%;
-		margin:0 auto;
-	}
-	.menu-nav{
-		margin-top: 10px;
-	}
-	ul.menu-nav li{
-		float:none;
-		padding: 0;
-		text-align:center;
-		background: none;
-		border: 3px solid #000;
-    	border-radius: 25px;
-    	margin-bottom:1rem;
-	}
-	.searchLi{
-		border:0px !important;
-	}
-	.searchBox{
-		width:100%;
-		margin-top:10px;
-	}
-	#content{
-		margin:0 1rem;
-	}
-	.questions{
-  		border: 3px solid #000;
- 		border-radius: 25px;
-  		background-color: white;
- 		opacity: 0.8;
-  		padding: 0rem;
-  		margin-bottom: 0rem; 
-  		display: -ms-flex;
-  		display: -webkit-flex;
-  		display: flex;
-	}
-	.userImage img{
-		width:80%;
-	}
-	.userBrief p{
-		margin-top: 1rem;
-  		font-size: 1.5rem;
-	}
-	ul.pollInfoUl li {
-  		list-style-type: none;
-  		float: left;
-  		margin-right: 0rem; 
-  		font-size: 1rem;
-  		margin-left: 1rem;
-	}
-}
-@media only screen and (max-width: 419px){
-	ul.pollInfoUl li{
-  		margin-left: 0rem !important;
-		margin-right:1rem !important;
-		font-size: 0.85rem !important;
+/*@media only screen and (max-width: 419px){
+	.pollInfo{
+		display:none;
 	}
 }
 @media only screen and (max-width: 372px){
@@ -270,21 +198,21 @@ ul.pollInfoUl li {
 		width: 100% !important;
   		margin: 0 auto!important;
 	}
-}
-@media only screen and (max-width: 480px){
-	#header,.menu,.search{
-		float:none;
-	}
+}*/
+@media only screen and (min-width:481px) and (max-width: 700px){
 	#header{
-		width:90%;
-		margin:0 auto;
-	}
+		 padding: 1rem 0rem 25rem 0rem;
+  	     margin-bottom: 3rem;
+		}
 	.logo{
 		width:100%;
-		margin-left: 1rem;
+		margin:0;
 	}
 	.logo img{
-		width:90%;
+		display: block;
+  		margin-right: auto;
+  		margin-left: auto;
+  		width:initial;
 	}
 	.menu{
 		margin-top:2rem;
@@ -300,7 +228,7 @@ ul.pollInfoUl li {
     	margin-bottom:1rem;
 	}
 	.searchLi{
-		border: 0px !important;
+		border:none !important;
 	}
 	.search{
 		margin:0;
@@ -329,7 +257,7 @@ ul.pollInfoUl li {
 		width:100%;
 	}
 	.userBrief p{
-		padding: 1rem 0rem;
+		padding: 1rem 1rem 0rem 0rem;
   		font-size: 1rem;
 	}
 	.mainPoll{
@@ -340,8 +268,11 @@ ul.pollInfoUl li {
 		font-size: 1rem;
 	}
 	.mainPoll .optionsForm{
-		padding:1rem 1rem;
+		padding:1rem 1rem 0rem 1rem;
 		font-size:1rem;
+	}
+	.pollInfo{
+		margin-top:1rem;
 	}
 	ul.pollInfoUl li{
 		 list-style-type: none;
@@ -349,5 +280,100 @@ ul.pollInfoUl li {
 		 margin-left: 0rem;
 		 margin-right:1rem;
 		 font-size: 1rem;
+	}
+}
+@media only screen and (min-width:481px) and (max-width: 645px){
+	.pollInfo{
+		display:none;
+	}
+	.questions{
+		padding: 1rem 0 0 0;
+	}
+}
+@media only screen and (max-width: 480px){
+	#header,.menu,.search{
+		float:none;
+	}
+	#header{
+		width:90%;
+		margin:0 auto;
+		padding:3rem 0rem 1rem 0rem;
+	}
+	.logo{
+		width:100%;
+		margin-left: 1rem;
+	}
+	.logo img{
+		width:90%;
+	}
+	.menu{
+		margin-top:3rem;
+		width:100%;
+	}
+	ul.menu-nav li{
+		float:none;
+		padding: 0;
+		text-align:center;
+		background: #fff;
+		border: 3px solid #000;
+    	border-radius: 25px;
+    	margin-bottom:1rem;
+	}
+	.searchLi{
+		border:none !important;
+	}
+	.search{
+		margin:0;
+		width:100%;
+	}
+	.searchBox{
+		width:100%;
+	    margin:0 auto;
+	    font-size:1rem;
+	    height:2.7rem;
+	}
+	#content{
+		margin: 2rem 0.5rem;
+	}
+	.questions{
+		padding: 1rem 0 0 0;
+	}
+	.questions{
+		padding: 1rem 0 0 0;
+  		margin: 0rem;
+  		margin-bottom:2rem;
+	}
+	.userInfo{
+		margin:1rem;
+		padding:0;
+	}
+	.userImage img{
+		padding:0;
+		width:100%;
+	}
+	.userBrief p{
+		padding: 1rem 1rem 0rem 0rem;
+  		font-size: 1rem;
+	}
+	.mainPoll{
+		padding:1rem;
+		margin-bottom: -1rem;
+	}
+	.mainPoll p{
+		font-size: 1rem;
+	}
+	.mainPoll .optionsForm{
+		padding:1rem 1rem 0rem 1rem;
+		font-size:1rem;
+	}
+	/*ul.pollInfoUl li{
+		 list-style-type: none;
+		 float: left;
+		 margin-left: 0rem;
+		 margin-right:1rem;
+		 font-size: 1rem;
+	}*/
+	.pollInfo{
+		display:none;
 	}
 }
