@@ -94,9 +94,11 @@ html{
 	margin-top:-2rem;
 	margin-right:8rem;
 	margin-left:5rem;
+	width:37%;
 }
 .logo img{
-	width:100%;
+	/*width:100;*/
+	width:403px;height:69px;
 }
 .menu{
 	font-size: 2rem;
@@ -119,7 +121,7 @@ ul.menu-nav li a:hover{
 	/*margin-left:1rem;*/
 }
 .searchBox{
-	width:200%;
+	width:150%;
 	height:3rem;
 	color:#000;
 	font-size:1rem;
@@ -186,6 +188,75 @@ ul.pollInfoUl li {
    height: 0; 
    clear: both;
 }
+@media only screen and (max-width: 700px){
+	#header{
+		margin:0;
+		margin-bottom: 5rem;
+		padding: 1rem 0;
+	}
+	.logo,.menu,.search{
+		float:none;
+	}
+	.logo{
+		width: 60%;
+  		margin: 0 auto;
+	}
+	.logo img{
+		width: 100%;
+  		margin: 0 auto;
+	}
+	.menu{
+		width: 100%;
+		margin:0 auto;
+	}
+	.menu-nav{
+		margin-top: 10px;
+	}
+	ul.menu-nav li{
+		float:none;
+		padding: 0;
+		text-align:center;
+		background: none;
+		border: 3px solid #000;
+    	border-radius: 25px;
+    	margin-bottom:1rem;
+	}
+	.searchLi{
+		border:0px !important;
+	}
+	.searchBox{
+		width:100%;
+		margin-top:10px;
+	}
+	#content{
+		margin:0 1rem;
+	}
+	.questions{
+  		border: 3px solid #000;
+ 		border-radius: 25px;
+  		background-color: white;
+ 		opacity: 0.8;
+  		padding: 0rem;
+  		margin-bottom: 0rem; 
+  		display: -ms-flex;
+  		display: -webkit-flex;
+  		display: flex;
+	}
+	.userImage img{
+		width:80%;
+	}
+	.userBrief p{
+		margin-top: 1rem;
+  		font-size: 1.5rem;
+	}
+	ul.pollInfoUl li {
+  		list-style-type: none;
+  		float: left;
+  		margin-right: 0rem; 
+  		font-size: 1rem;
+  		margin-left: 1rem;
+	}
+}
 @media only screen and (max-width: 419px){
 	ul.pollInfoUl li{
   		margin-left: 0rem !important;
@@ -227,6 +298,9 @@ ul.pollInfoUl li {
 		border: 3px solid #000;
     	border-radius: 25px;
     	margin-bottom:1rem;
+	}
+	.searchLi{
+		border: 0px !important;
 	}
 	.search{
 		margin:0;
@@ -275,31 +349,5 @@ ul.pollInfoUl li {
 		 margin-left: 0rem;
 		 margin-right:1rem;
 		 font-size: 1rem;
-	}
-}
-@media only screen and (max-width: 700px and min-width: 481px){
-	#header{
-		margin:0;
-		margin-bottom: 5rem;
-		padding:0;
-	}
-	.logo,.menu,.search{
-		float:none;
-	}
-	.logo{
-		width: 100%;
-  		margin: 0 auto;
-	}
-	.menu{
-		width: 100%;
-  		margin: 0 auto;
-  		padding:0;
-	}
-	.search{
-		padding-bottom: 1rem;
-		margin-left:0;
-	}
-	.searchBox{
-		width:100%;
 	}
 }
