@@ -95,31 +95,50 @@ a:hover{
 	background: linear-gradient(113deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
 	width:100%;
 	margin:2rem 0rem;
-	padding:3rem 0rem;
+	padding:2rem 0rem;
 	opacity:0.93;
+	position:initial;
+}
+#headerScroll{
+	background: -webkit-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+	background: -o-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+	background: -ms-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+	background: -moz-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+	background: linear-gradient(113deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
+	width:100%;
+	margin:0 0 3rem 0;
+  	padding: 0;
+  	opacity: 0.95;
+  	z-index: 10;
+  	position: fixed;
 }
 #headerContent{
-	width:80%;
+	width:95%;
 	margin:0 auto;
-	/*display:flex;*/
 }
-#headerContent>div{
-	/*flex:1;*/
-}
+/*#headerContent>div{*/
+	/*flex:1;
+}*/
 /*.logo,.menu,.search{
 	float:left;
 }*/
 .logo{
-	margin: -2rem 0;
-  	width: 30%;
+	/*margin: -2rem 0;*/
+  	width: 25%;
 }
 .logo img{
 	width:100%;
 }
+.logo img.imgScroll{
+	width:70%;
+}
 .menu{
 	font-size: 2rem;
-  	margin-top:-2rem;
-  	float:right;
+  	margin-top: -2.5rem;
+  	float: right;
+}
+.menuScroll{
+	font-size:1.5rem;
 }
 ul.menu-nav li{
 	list-style-type: none;
@@ -137,6 +156,9 @@ ul.menu-nav li a:hover{
 	margin-top:-0.65rem;
 	/*margin-left:1rem;*/
 }
+.searchScroll{
+	margin-top: -0.3rem;
+}
 .searchBox{
 	/*width:200%;*/
 	height:3rem;
@@ -146,6 +168,9 @@ ul.menu-nav li a:hover{
     border-radius: 25px;
 	text-align:center;
 	padding:0 1rem;
+}
+.searchBoxScroll{
+	height:2rem;
 }
 #content{
 	margin: 0 5rem;
@@ -230,7 +255,7 @@ ul.pollInfoUl li {
 }*/
 @media only screen and (min-width:481px) and (max-width: 960px){
 	#header{
-		 padding: 1rem 0rem 2rem 0rem;
+		 padding: 1rem 0rem 20rem 0rem;
   	     margin-bottom: 3rem;
 		}
 	.logo{
@@ -244,7 +269,7 @@ ul.pollInfoUl li {
   		width:initial;
 	}
 	.menu{
-		margin-top:2rem;
+		margin-top:1rem;
 		width:100%;
 	}
 	ul.menu-nav li{
@@ -330,7 +355,7 @@ ul.pollInfoUl li {
 	}
 	.logo{
 		width:100%;
-		margin:-4rem 1rem;
+		margin:-2rem 1rem;
 	}
 	.logo img{
 		width:90%;
