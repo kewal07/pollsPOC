@@ -84,6 +84,9 @@ html{
 body{
   	margin: 0 auto;
 }
+a:hover{
+	letter-spacing: 5px;
+}
 #header{
 	background: -webkit-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
 	background: -o-linear-gradient(337deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
@@ -98,10 +101,10 @@ body{
 #headerContent{
 	width:80%;
 	margin:0 auto;
-	display:flex;
+	/*display:flex;*/
 }
 #headerContent>div{
-	flex:1;
+	/*flex:1;*/
 }
 /*.logo,.menu,.search{
 	float:left;
