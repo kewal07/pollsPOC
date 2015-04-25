@@ -22,6 +22,9 @@ html{
 .createPollContent{
 	margin: 0 auto;
 }
+.createPollContentForm textarea{
+    vertical-align: top;
+}
 form.createPollContentForm{
 	/* width:60%; */
 	padding: 4rem;
@@ -52,7 +55,10 @@ form.createPollContentForm input{
     font-size: 2rem;
     overflow: hidden;
 	margin-top: -2rem;
-	margin-left:11rem;
+	/*margin-left:11rem;*/
+}
+#qText{
+	margin-bottom:2rem;
 }
 .createPollContentForm input[type="date"]{
 	border-radius: 10px;
@@ -78,9 +84,10 @@ form.createPollContentForm input{
 	visibility:hidden;
 	background:url('question.jpg') no-repeat center center fixed; */
 }
-.createPollContentForm input[type="submit"]  {
-	margin-left: 14rem;
-	width:35%;
+/*.createPollContentForm input[type="submit"]  */#submit{
+	margin-left: 18rem;
+	margin-top:1rem;
+	width:28%;
 	background: #3e9cbf; /*the colour of the button*/
 	border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
 	cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/

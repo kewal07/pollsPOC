@@ -95,7 +95,6 @@ a:hover{
 	background: linear-gradient(113deg, rgb(239, 240, 243) 0%, rgb(230, 232, 238) 98%);
 	width:100%;
 	margin:2rem 0rem;
-	padding:2rem 0rem;
 	opacity:0.93;
 	position:initial;
 }
@@ -127,14 +126,14 @@ a:hover{
   	width: 25%;
 }
 .logo img{
-	width:100%;
+	width:30%;
 }
 .logo img.imgScroll{
 	width:70%;
 }
 .menu{
 	font-size: 2rem;
-  	margin-top: -2.5rem;
+  	margin-top: -5rem;
   	float: right;
 }
 .menuScroll{
@@ -272,9 +271,7 @@ ul.pollInfoUl li {
 	}
 	.logo img{
 		display: block;
-  		margin-right: auto;
-  		margin-left: auto;
-  		width:initial;
+  		margin:0 auto;
 	}
 	.menu{
 		margin-top:1rem;
@@ -366,7 +363,8 @@ ul.pollInfoUl li {
 		margin:-2rem 1rem;
 	}
 	.logo img{
-		width:90%;
+		margin: 0 auto;
+  		display: block;
 	}
 	.menu{
 		margin-top:3rem;
