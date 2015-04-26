@@ -105,7 +105,7 @@ form.createPollContentForm input{
 	border-radius: 25px;
 }
 /***SET THE BUTTON'S HOVER AND FOCUS STATES***/
-.createPollContentForm input[type="submit"]:hover{
+/*.createPollContentForm input[type="submit"]*/#submit:hover{
 	color:#dfe7ea;
 	letter-spacing:.2rem;
 	/*reduce the size of the shadow to give a pushed effect*/
