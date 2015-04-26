@@ -129,7 +129,7 @@ a:hover{
 	width:30%;
 }
 .logo img.imgScroll{
-	width:70%;
+	width:10%;
 }
 .menu{
 	font-size: 2rem;
@@ -138,6 +138,7 @@ a:hover{
 }
 .menuScroll{
 	font-size:1.5rem;
+	margin-top:-2rem;
 }
 ul.menu-nav li{
 	list-style-type: none;
