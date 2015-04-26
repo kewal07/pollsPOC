@@ -27,7 +27,7 @@ html{
 }
 form.createPollContentForm{
 	/* width:60%; */
-	padding: 4rem;
+	padding: 4rem 4rem 0 4rem;
 	margin:0 auto;
 	/* margin-left:21rem; */
 }
