@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, intial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="questionDetail.css">
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="js/scriptIE.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/Chart.js"></script>
+	</head>
+	<body>
+		<section id="header">
+			<div id="headerContent">	
+				<div class="logo">
+					<img src="pollsLogo.png" alt="myPolls" />
+				</div>
+				<div class="menu">
+					<ul class="menu-nav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Trending</a></l1>
+						<li><a href="#">Featured</a></li>
+						<li><a href="#">Login</a></li>
+						<li class="searchLi"><div class="search">
+								<input type="search" class="searchBox" name="searchQuery" placeholder="Search Opinions">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div> 
+		</section>
+		<section id="content">
+			<div class="questions">
+				<div class="questionContent">
+					<div class="userInfo">
+						<div class="userImage">
+							<img src="katy.jpg" alt="Katy P.">
+						</div>
+						<div class="userBrief">
+							<p>Katy P</p>
+						</div>
+					</div>
+					<div class="mainPoll">
+						<p>What technology should i learn because i know only C and C++ but the future seems to be moving towards a more web based world with improved focus on web technologies?
+						</p>
+						<div class="analyzeButton">
+							<input id="submit" type="submit" value="Analyse" />
+						</div>
+						<canvas id="myChart" width="400" height="400"></canvas>
+					</div>
+				</div>
+				<div class="analysis">
+					<div class="gender">
+						<p> Gender </p>
+						<canvas id="genderChart" width="200" height="200"></canvas>
+					</div>
+					<div class="age">
+						<canvas id="ageChart" width="200" height="200"></canvas>
+					</div>
+					<div class="location">
+					</div>
+					<div class="others">
+						<canvas id="othersChart" width="200" height="200"></canvas>
+					</div>
+				</div>
+				<div class="comments">
+					<p>
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					</p>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
