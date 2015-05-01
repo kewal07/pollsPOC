@@ -9,7 +9,7 @@ $(document).ready(function(){
 		$(window).on('scroll', function() {
 		    scrollPosition = $(this).scrollTop();
 		    // console.log(scrollPosition);
-		    if (scrollPosition >= 163) {
+		    if (scrollPosition >= 11) {
 		        // If the function is only supposed to fire once
 		        // $(this).off('scroll');
 		        //alert("bottom");
@@ -30,6 +30,7 @@ $(document).ready(function(){
 		    }
 		});
 	}
+	
 	/* End */
 
 	/*For file browse */
@@ -52,49 +53,154 @@ $(document).ready(function(){
 	});
 	/* End */
 
-	/*charts*/
-	var data = {
-    labels: ["HTML & CSS", "IOS", "jQuery", "Android"],
-    datasets: [
-        {
-            label: "Question",
-            fillColor: "rgba(220,220,220,0.5)",
-            strokeColor: "rgba(220,220,220,0.8)",
-            highlightFill: "rgba(220,220,220,0.75)",
-            highlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81]
-        }
-    ]
-	};
 	// options = {
-	//   responsive: true
+	// 	responsive: false,
+	// 	scaleShowGridLines : false
 	// };
-	var ctx = document.getElementById("myChart").getContext("2d");
-	var myNewChart = new Chart(ctx).Bar(data,{align:'h'});
-	// new Chart(ctx). Bar(data, options);
-	// Get context with jQuery - using jQuery's .get() method.
-	/*var ctx = $("#myChart").get(0).getContext("2d");
-	// This will get the first returned node in the jQuery collection.
-	var myLineChart = new Chart(ctx).Line(data, options);*/
-	// var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData,{align:'h'});
+	// /*Polls Bar chart*/
+	// var data = {
+	// 	    labels: ["HTML & CSS", "IOS", "jQuery", "Android"],
+	// 	    datasets: [
+	// 	        {
+	// 	            label: "Question",
+	// 	            fillColor: "rgba(220,220,220,0.5)",
+	// 	            strokeColor: "rgba(220,220,220,0.8)",
+	// 	            highlightFill: "rgba(220,220,220,0.75)",
+	// 	            highlightStroke: "rgba(220,220,220,1)",
+	// 	            data: [65, 59, 80, 81]
+	// 	        }
+	// 	    ]
+	// 		};
+	// 		// options = {
+	// 		//   responsive: true
+	// 		// };
+	// 		var ctx = document.getElementById("pollsChart").getContext("2d");
+	// 		var horizontalBarChartPolls = new Chart(ctx).HorizontalBar(data, options);
+			//var myNewChart = new Chart(ctx).Bar(data,options);
+			// new Chart(ctx). Bar(data, options);
+			// Get context with jQuery - using jQuery's .get() method.
+			/*var ctx = $("#myChart").get(0).getContext("2d");
+			// This will get the first returned node in the jQuery collection.
+			var myLineChart = new Chart(ctx).Line(data, options);*/
+			// var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData,{align:'h'});
+	/* End */
 
-	var data1 = [
-		    {
-		        value: 300,
-		        color:"#F7464A",
-		        highlight: "#FF5A5E",
-		        label: "M"
-		    },
-		    {
-		        value: 250,
-		        color: "#46BFBD",
-		        highlight: "#5AD3D1",
-		        label: "F"
-		    }
-	]
-	var ctxGender = document.getElementById("genderChart").getContext("2d");
-	var myNewChartGender = new Chart(ctxGender).Doughnut(data1);
-	// new Chart(ctx). Doughnut(data1, options);
-	/*end*/
+	/* Show Hide analysis */
+
+	// $('#submit').click(function(){
+	// 	$('.analysis').toggle("slow");
+	// 	/*charts*/
+	// 	if($('.analysis').is(':visible')){
+			
+	// 	}
+	// });
+	/* End */
+	
+	// function drawMarkersMap(){
+	// 	 var data = google.visualization.arrayToDataTable([
+	// 	          ['State', 'Data'],
+	// 	          ['West Bengal', 5],
+ //                  ['Karnataka', 22],
+ //                  ['Jharkhand', 37],
+ //                  ['Andhra Pradesh', 15],
+ //                  ['Assam',7],
+ //                  ['Rajasthan',102],
+ //                  ['Gujarat',112],
+ //                  ['Haryana',3],
+ //                  ['Goa',76],
+ //                  ['Arunachal Pradesh',13],
+ //                  ['Bihar',47],
+ //                  ['Chhattisgarh',39],
+ //                  ['Himachal Pradesh',20],
+ //                  ['Kerala',33],
+ //                  ['Madhya Pradesh',21],
+ //                  ['Maharashtra',45],
+ //                  ['Manipur',77],
+ //                  ['Meghalaya',67],
+ //                  ['Mizoram',1],
+ //                  ['Nagaland',4],
+ //                  ['Punjab',65],
+ //                  ['Sikkim',8],
+ //                  ['Telangana',21],
+ //                  ['Tripura',3],
+ //                  ['Uttar Pradesh',143],
+ //                  ['Jammu and Kashmir',17],
+ //                  ['Tamil Nadu',33],
+ //                  ['Orissa',99],
+ //                  ['Puducherry',11],
+ //                  ['Lakshadweep',1],
+ //                  ['Chandigarh',44],
+ //                  ['Delhi',175],
+ //                  ['Andaman and Nicobar Islands',3],
+ //                  ['IN-UT',11]
+ //        ]);
+ 
+ //      	var options = {
+	//         region: 'IN',
+	//         displayMode: 'regions',
+	//         resolution: 'provinces',
+	//         datalessRegionColor: '#f8bbd0',
+	//         colorAxis: {colors: ['#FF9900', '#FFFFFF', '#00CC00']},
+	//         backgroundColor: '#81d4fa',
+	//         domain: 'IN',
+	//         keepAspectRatio: true
+ //      	};
+ 
+ //      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+ //      chart.draw(data, options);
+ //  };
+    //   function drawMarkersMap() {
+    //     var data = google.visualization.arrayToDataTable([
+		  //         ['State', 'Data'],
+		  //         ['West Bengal', 5],
+    //               ['Karnataka', 22],
+    //               ['Jharkhand', 37],
+    //               ['Andhra Pradesh', 15],
+    //               ['Assam',7],
+    //               ['Rajasthan',102],
+    //               ['Gujarat',112],
+    //               ['Haryana',3],
+    //               ['Goa',76],
+    //               ['Arunachal Pradesh',13],
+    //               ['Bihar',47],
+    //               ['Chhattisgarh',39],
+    //               ['Himachal Pradesh',20],
+    //               ['Kerala',33],
+    //               ['Madhya Pradesh',21],
+    //               ['Maharashtra',45],
+    //               ['Manipur',77],
+    //               ['Meghalaya',67],
+    //               ['Mizoram',1],
+    //               ['Nagaland',4],
+    //               ['Punjab',65],
+    //               ['Sikkim',8],
+    //               ['Telangana',21],
+    //               ['Tripura',3],
+    //               ['Uttar Pradesh',143],
+    //               ['Jammu and Kashmir',17],
+    //               ['Tamil Nadu',33],
+    //               ['Orissa',99],
+    //               ['Puducherry',11],
+    //               ['Lakshadweep',1],
+    //               ['Chandigarh',44],
+    //               ['Delhi',175],
+    //               ['Andaman and Nicobar Islands',3],
+    //               ['IN-UT',11]
+    //     ]);
+ 
+    //   	var options = {
+	   //      region: 'IN',
+	   //      displayMode: 'regions',
+	   //      resolution: 'provinces',
+	   //      datalessRegionColor: '#f8bbd0',
+	   //      colorAxis: {colors: ['#FF9900', '#FFFFFF', '#00CC00']},
+	   //      backgroundColor: '#81d4fa',
+	   //      domain: 'IN',
+	   //      keepAspectRatio: true
+    //   	};
+ 
+    //   var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+    //   chart.draw(data, options);
+    // }
 });
 

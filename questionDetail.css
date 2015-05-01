@@ -1,20 +1,28 @@
 html{
 	background:url('questionDetailbg.jpg') no-repeat center center fixed;
-	background-size:cover;/*font-family: 'capture',sans-serif;*/
-	/*max-width: 1200px;
-  	margin: 0 auto;
-  	position: relative; /* Fix for absolute positioning */*/
+	background-size:cover;
   	max-width: 1800px;
   	margin: 0 auto;
   	position: relative;
 }
+
 .questions{
 	display:block;
 }
+.userImage img {
+  border-radius: 50%;
+  padding: 0;
+  width: 100%;
+  z-index: 99999;
+  position: relative;
+  }
+#pollsChart{
+  height: 200px;
+  position: relative;
+  left: -9%;
+  }
 #submit{
-	margin-left: 18rem;
-	margin-top:1rem;
-	width:28%;
+	padding: 0 2rem 0 2rem;
 	background: #3e9cbf; /*the colour of the button*/
 	border:1px solid #3e9cbf; /*required or the default border for the browser will appear*/
 	cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
@@ -31,14 +39,41 @@ html{
 	-webkit-border-radius: 25px;
 	border-radius: 25px;
 }
-.analyzeButton{
-	position: relative;
-  top: 13rem;
-  left: 34rem;
-  width:65%;
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+  width: 15%;
+  float: right;
+  font-size: 1.6rem;
 }
 
+ul.share-buttons li{
+  display: inline;
+}
+.analysis{
+	display:none;
+	margin-top: 5rem;
+}
+.graphContainer{
+	width:94%;
+	margin:0 auto;
+}
+.graphContainer p{
+	text-align: center;
+	font-size: 2rem;
+	z-index: 10;
+  	position: relative;
+  	margin-top:1rem;
+}
 .gender{
-	position: relative;
-	left:50%;
+	border:#666 solid;
+}
+
+#genderChart{
+  height: 500px;
+  overflow: hidden;
+  width: 46%;
+  margin: 0 auto;
+  margin-top:-47px;
+  position:relative;
 }

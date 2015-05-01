@@ -4,10 +4,11 @@
 		<meta charset="UTF-8" name="viewport" content="width=device-width, intial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="questionDetail.css">
-		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 		<script src="js/scriptIE.js"></script>
 		<script src="js/script.js"></script>
-		<script src="js/Chart.js"></script>
+		<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+		<script src="js/pollsGraph.js"></script>
 	</head>
 	<body>
 		<section id="header">
@@ -43,24 +44,101 @@
 					<div class="mainPoll">
 						<p>What technology should i learn because i know only C and C++ but the future seems to be moving towards a more web based world with improved focus on web technologies?
 						</p>
-						<div class="analyzeButton">
-							<input id="submit" type="submit" value="Analyse" />
+						<div id="pollsChart">
 						</div>
-						<canvas id="myChart" width="400" height="400"></canvas>
+						<div class="analyzeAndShare">
+							<input id="submit" type="submit" value="Analyse" />
+							<ul class="share-buttons">
+								  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost&t=ssd" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+								  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Flocalhost&text=ssd:%20http%3A%2F%2Flocalhost" target="_blank" title="Tweet"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+								  <li><a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="analysis">
 					<div class="gender">
-						<p> Gender </p>
-						<canvas id="genderChart" width="200" height="200"></canvas>
+						<div class="graphContainer">
+							<p> Gender </p>
+							<div id="genderChart">
+							</div>
+						</div>
 					</div>
 					<div class="age">
-						<canvas id="ageChart" width="200" height="200"></canvas>
+						<p> Age </p>
+						<div class="graphContainer">
+							<div id="ageChart" width="100%" height="auto"></div>
+						</div>
 					</div>
-					<div class="location">
-					</div>
+					<!-- <div class="location">
+						<p> Location </p>
+						<div class="graphContainer">
+							<div id="locationChart" style="width:32%; height: auto;"></div>
+							<script type='text/javascript'>
+     							google.load('visualization', '1', {'packages': ['geochart']});
+     							google.setOnLoadCallback(drawMarkersMap);
+							    function drawMarkersMap() {
+							        var data = google.visualization.arrayToDataTable([
+								          ['State', 'Data'],
+								          ['West Bengal', 5],
+		                                  ['Karnataka', 22],
+		                                  ['Jharkhand', 37],
+		                                  ['Andhra Pradesh', 15],
+		                                  ['Assam',7],
+		                                  ['Rajasthan',102],
+		                                  ['Gujarat',112],
+		                                  ['Haryana',3],
+		                                  ['Goa',76],
+		                                  ['Arunachal Pradesh',13],
+		                                  ['Bihar',47],
+		                                  ['Chhattisgarh',39],
+		                                  ['Himachal Pradesh',20],
+		                                  ['Kerala',33],
+		                                  ['Madhya Pradesh',21],
+		                                  ['Maharashtra',45],
+		                                  ['Manipur',77],
+		                                  ['Meghalaya',67],
+		                                  ['Mizoram',1],
+		                                  ['Nagaland',4],
+		                                  ['Punjab',65],
+		                                  ['Sikkim',8],
+		                                  ['Telangana',21],
+		                                  ['Tripura',3],
+		                                  ['Uttar Pradesh',143],
+		                                  ['Jammu and Kashmir',17],
+		                                  ['Tamil Nadu',33],
+		                                  ['Orissa',99],
+		                                  ['Puducherry',11],
+		                                  ['Lakshadweep',1],
+		                                  ['Chandigarh',44],
+		                                  ['Delhi',175],
+		                                  ['Andaman and Nicobar Islands',3],
+		                                  ['IN-UT',11]
+							        ]);
+							 
+							      	var options = {
+								        region: 'IN',
+								        displayMode: 'regions',
+								        resolution: 'provinces',
+		                                datalessRegionColor: '#f8bbd0',
+		                                colorAxis: {colors: ['#FF9900', '#FFFFFF', '#00CC00']},
+		                                backgroundColor: '#81d4fa',
+		                                domain: 'IN',
+		                                keepAspectRatio: true
+	      							};
+							 
+							      	var chart = new google.visualization.GeoChart(document.getElementById('locationChart'));
+							      	chart.draw(data, options);
+							    };
+    					</script>
+						</div>
+					</div> -->
 					<div class="others">
-						<canvas id="othersChart" width="200" height="200"></canvas>
+						<p> Others </p>
+						<div class="graphContainer1" style="height:1000px">
+							<div id="othersChart" style="width:900px; height:500px;">
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="comments">
