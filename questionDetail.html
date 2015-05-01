@@ -65,78 +65,23 @@
 						</div>
 					</div>
 					<div class="age">
-						<p> Age </p>
 						<div class="graphContainer">
-							<div id="ageChart" width="100%" height="auto"></div>
+							<p> Age </p>
+							<div id="ageChart">
+							</div>
 						</div>
 					</div>
-					<!-- <div class="location">
-						<p> Location </p>
+					<div class="location">
 						<div class="graphContainer">
-							<div id="locationChart" style="width:32%; height: auto;"></div>
-							<script type='text/javascript'>
-     							google.load('visualization', '1', {'packages': ['geochart']});
-     							google.setOnLoadCallback(drawMarkersMap);
-							    function drawMarkersMap() {
-							        var data = google.visualization.arrayToDataTable([
-								          ['State', 'Data'],
-								          ['West Bengal', 5],
-		                                  ['Karnataka', 22],
-		                                  ['Jharkhand', 37],
-		                                  ['Andhra Pradesh', 15],
-		                                  ['Assam',7],
-		                                  ['Rajasthan',102],
-		                                  ['Gujarat',112],
-		                                  ['Haryana',3],
-		                                  ['Goa',76],
-		                                  ['Arunachal Pradesh',13],
-		                                  ['Bihar',47],
-		                                  ['Chhattisgarh',39],
-		                                  ['Himachal Pradesh',20],
-		                                  ['Kerala',33],
-		                                  ['Madhya Pradesh',21],
-		                                  ['Maharashtra',45],
-		                                  ['Manipur',77],
-		                                  ['Meghalaya',67],
-		                                  ['Mizoram',1],
-		                                  ['Nagaland',4],
-		                                  ['Punjab',65],
-		                                  ['Sikkim',8],
-		                                  ['Telangana',21],
-		                                  ['Tripura',3],
-		                                  ['Uttar Pradesh',143],
-		                                  ['Jammu and Kashmir',17],
-		                                  ['Tamil Nadu',33],
-		                                  ['Orissa',99],
-		                                  ['Puducherry',11],
-		                                  ['Lakshadweep',1],
-		                                  ['Chandigarh',44],
-		                                  ['Delhi',175],
-		                                  ['Andaman and Nicobar Islands',3],
-		                                  ['IN-UT',11]
-							        ]);
-							 
-							      	var options = {
-								        region: 'IN',
-								        displayMode: 'regions',
-								        resolution: 'provinces',
-		                                datalessRegionColor: '#f8bbd0',
-		                                colorAxis: {colors: ['#FF9900', '#FFFFFF', '#00CC00']},
-		                                backgroundColor: '#81d4fa',
-		                                domain: 'IN',
-		                                keepAspectRatio: true
-	      							};
-							 
-							      	var chart = new google.visualization.GeoChart(document.getElementById('locationChart'));
-							      	chart.draw(data, options);
-							    };
-    					</script>
+							<p> Location </p><div class="back" onClick="back()"><i class="fa fa-arrow-left"></i></div>
+							<div id="locationChart">
+							</div>
 						</div>
-					</div> -->
+					</div>
 					<div class="others">
-						<p> Others </p>
-						<div class="graphContainer1" style="height:1000px">
-							<div id="othersChart" style="width:900px; height:500px;">
+						<div class="graphContainer">
+							<p> Others </p>
+							<div id="othersChart">
 							</div>
 						</div>
 					</div>

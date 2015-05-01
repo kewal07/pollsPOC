@@ -65,15 +65,19 @@ ul.share-buttons li{
   	position: relative;
   	margin-top:1rem;
 }
-.gender{
+.gender,.age,.location,.others{
 	border:#666 solid;
+	margin-bottom: 5rem;
 }
 
-#genderChart{
+#genderChart,#ageChart,#othersChart{
   height: 500px;
   overflow: hidden;
   width: 46%;
   margin: 0 auto;
   margin-top:-47px;
   position:relative;
+}
+.back{
+	display:none !important;
 }
