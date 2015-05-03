@@ -1,5 +1,26 @@
 google.load('visualization', '1', {packages: ['corechart', 'bar','geochart']});
 $(document).ready(function(){
+
+  window.addEventListener("resize", resizeEventHandler);
+  
+  function resizeEventHandler() {
+	drawPollsChart();
+	if($('.analysis').is(':visible')){
+		$("#genderChart").load("", function(){
+            drawGenderChart();
+        });
+        $("#ageChart").load("", function(){
+            drawAgeChart();
+        });
+        $("#othersChart").load("", function(){
+            drawOthersChart();
+        });
+        $("#locationChart").load("", function(){
+            drawLocationChart();
+        });
+	}
+  }
+  
   $("#pollsChart").load("", function(){
         drawPollsChart();
   });
@@ -23,12 +44,6 @@ $(document).ready(function(){
           });
         }
       }, delay); 
-      /*charts*/
-      // if($('.analysis').is(':visible')){
-      //   $("#genderChart").load("", function(){
-      //     drawGenderChart();
-      //   });
-      // }
     });    
 });
 
@@ -79,11 +94,11 @@ function drawPollsChart() {
         function displayAnnotation(e){
          data = google.visualization.arrayToDataTable([
                 ['Options', 'Votes', { role: 'style' }, { role: 'annotation' }],
-                ['Html & Css', 8.94, '#F7464A','22%'],            // RGB value
+                ['Html & Css', 8.94, '#F7464A','14%'],            // RGB value
                 ['Android', 10.49, '#46BFBD','16%'],            // English color name
                 ['IOS', 19.30, '#66FF33','56%'],
                 ['Javascript', 21.45, '#FF6600','9%'], // CSS-style declaration
-            ]);
+        ]);
         options = {
           chartArea: {width: '60%'},
           fontSize:20,
@@ -95,7 +110,7 @@ function drawPollsChart() {
             minValue: 0,
             gridlines: {
               color: 'transparent'
-              },
+            },
             textPosition: 'none',
             baselineColor: 'transparent'
           },
@@ -120,7 +135,6 @@ function drawPollsChart() {
   }
 
 function drawGenderChart() {
-  // alert("sd");
   var data = google.visualization.arrayToDataTable([
     ['Gender', 'Votes'],
     ['Male',     350],
@@ -135,7 +149,6 @@ function drawGenderChart() {
 }
 
 function drawAgeChart() {
-  // alert("sd");
   var data = google.visualization.arrayToDataTable([
     ['Age Group', 'Votes'],
     ['Upto 19',     350],
@@ -152,13 +165,12 @@ function drawAgeChart() {
 }
 
 function drawOthersChart() {
-  // alert("sd");
   var data = google.visualization.arrayToDataTable([
     ['Users', 'Votes'],
-    ['Windows',     1350],
-    ['Android',   435],
-    ['Apple',     350],
-    ['Linux',   45]
+    ['Windows', 1350],
+    ['Android', 435],
+    ['Apple', 350],
+    ['Linux', 45]
   ]);
   var options = {
     pieHole: 0.4,
@@ -246,7 +258,7 @@ function drawIndiaMap() {
   var chart = new google.visualization.GeoChart(document.getElementById('locationChart'));
   chart.draw(data, options);
 };
-    /* India End */
+/* India End */
     
 /*US Starts*/
 function drawUSMap() {
