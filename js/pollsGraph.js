@@ -26,6 +26,8 @@ $(document).ready(function(){
   });
   $('#submit').click(function(){
       $('.analysis').toggle("slow");
+	  $('#mapBackButton').removeClass("back");
+	  $("#mapBackButton").css("display", "inline-block");
       var delay=1000; //1 seconds
       setTimeout(function(){
       //your code to be executed after 1 seconds
@@ -181,7 +183,7 @@ function drawOthersChart() {
 }
 
 function drawLocationChart() {
-    $('.fa').addClass('back');
+    $('#mapBackButton').removeClass('back');
     var data = google.visualization.arrayToDataTable([
       ['Country', 'Votes'],
       ['Germany', 20000],
@@ -190,7 +192,8 @@ function drawLocationChart() {
       ['Canada', 5000],
       ['France', 6000],
       ['RU', 7000],
-      ['India', 9990]
+      ['India', 9990],
+	  ['China', 10000]
     ]);
     var options = {};
     var chart = new google.visualization.GeoChart(document.getElementById('locationChart'));
@@ -198,11 +201,14 @@ function drawLocationChart() {
     google.visualization.events.addListener(chart, 'regionClick', selectHandler);
 }
 function selectHandler(e) {
-  $('.back').removeClass('back');
   if(e.region == 'IN'){
+	$("#mapBackButton").css("display", "inline-block");
+	$('#mapBackButton').addClass("back");
     drawIndiaMap()
   } else if(e.region == 'US'){
-      drawUSMap()
+	$("#mapBackButton").css("display", "inline-block");
+	$('#mapBackButton').addClass("back");
+    drawUSMap()
   }
 } 
   
@@ -252,8 +258,7 @@ function drawIndiaMap() {
       datalessRegionColor: '#666',
       colorAxis: {colors: ['#FF9900', '#FFFFFF', '#00CC00']},
       backgroundColor: '#81d4fa',
-      domain: 'IN',
-      width: '100%'
+      domain: 'IN'
   };
   var chart = new google.visualization.GeoChart(document.getElementById('locationChart'));
   chart.draw(data, options);
@@ -340,6 +345,7 @@ var options = {
 /*US Ends*/
 
 function back(){  
-      drawLocationChart();
+	$("#mapBackButton").css("display", "none");  
+    drawLocationChart();
 }
    

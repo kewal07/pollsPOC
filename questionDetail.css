@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'entypo';
+  font-style: normal;
+  font-weight: normal;
+  src: url('http://weloveiconfonts.com/api/fonts/entypo/entypo.eot');
+  src: url('http://weloveiconfonts.com/api/fonts/entypo/entypo.eot?#iefix') format('eot'), 
+  url('http://weloveiconfonts.com/api/fonts/entypo/entypo.woff') format('woff'), 
+  url('http://weloveiconfonts.com/api/fonts/entypo/entypo.ttf') format('truetype'), 
+  url('http://weloveiconfonts.com/api/fonts/entypo/entypo.svg#entypo') format('svg');
+}
+
 html{
 	background:url('questionDetailbg.jpg') no-repeat center center fixed;
 	background-size:cover;
@@ -19,7 +30,7 @@ html{
 #pollsChart{
   height: 200px;
   position: relative;
-  left: -9%;
+  left: -3%;
 }
 #submit{
 	padding: 0 2rem 0 2rem;
@@ -46,11 +57,11 @@ ul.share-buttons{
   padding-left:14%;
 }
 
-.shareButtonsDiv{
+/* .shareButtonsDiv{
 	width: 25%;
 	display: inline-block;
 	margin-left: 40%;
-}
+} */
 
 ul.share-buttons li{
   display: inline;
@@ -75,6 +86,10 @@ ul.share-buttons li{
 	margin-bottom: 5rem;
 }
 
+.location{
+	height: 30%;
+}
+
 #genderChart,#ageChart,#othersChart{
   height: 500px;
   overflow: hidden;
@@ -83,8 +98,23 @@ ul.share-buttons li{
   margin-top:-47px;
   position:relative;
 }
-.back{
-	#display:none !important;
+
+#locationChart{
+	height: 500px;
+}
+
+.shareButtonsDiv {
+	width: 25%;
+	display: inline-block;
+	margin-left: 40%;
+}
+
+.shareList{
+	display:inline;
+}
+
+.fa{
+	font-size:25px !important;
 }
 
 @media only screen and (max-width: 480px){
@@ -96,7 +126,7 @@ ul.share-buttons li{
 
 	#submit{
 		padding: 0 1rem 0 1rem;
-		font-size:1.5rem;
+		font-size:1rem;
 		-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 4px 0px 0px #205c73, 0px 8px 4px #999;
 		-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 4px 0px 0px #205c73, 0px 8px 4px #999;
 		box-shadow: inset 0px 1px 0px #3e9cbf, 0px 4px 0px 0px #205c73, 0px 8px 4px #999;
@@ -120,7 +150,7 @@ ul.share-buttons li{
 	}
 	
 	#locationChart{
-		height: 250px;
+		height: 200px;
 		overflow: hidden;
 		width: 100%;
 		margin: 0 auto;
@@ -129,9 +159,10 @@ ul.share-buttons li{
 	}
 	
 	.shareButtonsDiv{
-		width: 66%;
+		width: 35%;
 		display: inline-block;
-		margin-left: -15%;
+		margin-left: 0%;
+		padding-left: 15%;
 	}
 	
 	ul.share-buttons{
@@ -145,5 +176,100 @@ ul.share-buttons li{
 		margin-bottom: 5rem;
 		margin-left:1rem;
 		margin-right:1rem;
+	}
+	
+	.analyzeAndShare{
+		margin-left:-10%;
+		display:flex;
+	}
+	
+	.fa{
+		font-size:15px !important;
+	}
+	
+	.back {
+		width: 5%;
+		height: 10%;
+		position: relative;
+		margin-left: -25%;
+	}
+}
+
+@media only screen and (min-width:481px) and (max-width: 960px){
+
+#pollsChart{
+		height: 180px;
+		position: relative;
+		left: -3%;
+	}
+
+	#submit{
+		padding: 0 1rem 0 1rem;
+		font-size:1rem;
+		-webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 4px 0px 0px #205c73, 0px 8px 4px #999;
+		-moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 4px 0px 0px #205c73, 0px 8px 4px #999;
+		box-shadow: inset 0px 1px 0px #3e9cbf, 0px 4px 0px 0px #205c73, 0px 8px 4px #999;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		border-radius: 20px;
+	}
+	
+	.graphContainer{
+		width:60%;
+		margin:0 auto;
+	}
+	
+	#genderChart,#ageChart,#othersChart{
+		height: 250px;
+		overflow: hidden;
+		width: 100%;
+		margin: 0 auto;
+		margin-top:-47px;
+		position:relative;
+	}
+	
+	#locationChart{
+		height: 300px;
+		overflow: hidden;
+		width: 100%;
+		margin: 0 auto;
+		margin-top:-47px;
+		position:relative;
+	}
+	
+	.shareButtonsDiv{
+		width: 35%;
+		display: inline-block;
+		margin-left: 10%;
+		padding-left: 15%;
+	}
+	
+	ul.share-buttons{
+		padding-left:24%;
+	}
+	.fa-2x {
+		font-size: 1em !important;
+	}
+	.gender,.age,.location,.others{
+		border:#666 solid;
+		margin-bottom: 5rem;
+		margin-left:1rem;
+		margin-right:1rem;
+	}
+	
+	.analyzeAndShare{
+		margin-left:-2%;
+		display:flex;
+	}
+	
+	.fa{
+		font-size:15px !important;
+	}
+	
+	.back {
+		width: 5%;
+		height: 10%;
+		position: relative;
+		margin-left: -25%;
 	}
 }
